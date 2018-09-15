@@ -66,6 +66,10 @@ class TodoListState extends State<TodoList> {
     );
   }
 
+  void changedWithButton(int index){setState(() {
+    _promptRemoveTodoItem(index);
+  });}
+
   // Build the whole list of todo items
   Widget _buildTodoList() {
     return new ListView.builder(
@@ -103,6 +107,8 @@ class TodoListState extends State<TodoList> {
           color: alreadyComplete? Colors.red:null,
 
         ),
+
+
 
 //        onTap: () => _promptRemoveTodoItem(index),
       onTap: () {
