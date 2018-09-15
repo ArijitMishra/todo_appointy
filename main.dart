@@ -118,6 +118,7 @@ class TodoListState extends State<TodoList> {
 
           } else {
             _completeItems.add(todoText);
+            _promptRemoveTodoItem(index);
 
           }
         });
