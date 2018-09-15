@@ -76,15 +76,7 @@ class TodoListState extends State<TodoList> {
     );
   }
 
-  Widget _buildCompleteList() {
-    return new ListView.builder(
-      itemBuilder: (context, index)
-        if(index < _completeItems.length) {
-          return _buildTodoItem(_completeItems[index], index);
-        }
-      },
-    );
-  }
+
 
   // Build a single todo item
   Widget _buildTodoItem(String todoText, int index) {
